@@ -1,0 +1,10 @@
+<form action="/login<%= redirect ? `?redirect=${redirect}` : "" %>" method="POST">
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" />
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" />
+  <% if (redirect) { %>
+  <input type="hidden" name="redirect" value="<%= redirect %>" />
+  <% } %>
+  <button type="submit">Submit</button>
+</form>

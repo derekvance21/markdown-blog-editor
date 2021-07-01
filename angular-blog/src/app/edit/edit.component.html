@@ -1,0 +1,36 @@
+<form action="">
+  <div class="input-container">
+    <label for="edit-title" class="input-label">Title:</label>
+    <input
+      type="text"
+      name="title"
+      id="edit-title"
+      [(ngModel)]="post.title"
+      size="45"
+      required
+    />
+  </div>
+  <div class="input-container">
+    <label for="edit-body" class="input-label">Body:</label>
+    <textarea
+      name="body"
+      id="edit-body"
+      cols="50"
+      rows="10"
+      [(ngModel)]="post.body"
+      required
+    ></textarea>
+  </div>
+  <div class="modified-info">
+    Last Modified: {{ formatDate(post.modified) }}
+  </div>
+  <button id="edit-save-button" type="submit" (click)="handleSave(post)">
+    Save
+  </button>
+  <button id="edit-delete-button" type="submit" (click)="handleDelete(post)">
+    Delete
+  </button>
+  <button id="edit-preview-button" type="submit" (click)="handlePreview(post)">
+    Preview
+  </button>
+</form>

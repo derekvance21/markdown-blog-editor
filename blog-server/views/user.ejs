@@ -1,0 +1,12 @@
+<h1>Posts by <%= username %></h1>
+<main>
+  <% posts.forEach(post => { %>
+  <div>
+    <hr />
+    <a href="<%= username %>/<%= post.postid %>"><%- post.title %></a> <%=
+    post.modified %> | <%= post.created %> <%- post.body %>
+  </div>
+  <% }); %> <% if (next_start) { %>
+  <a id="next_link" href="?start=<%= next_start %>">More Posts &rarr;</a>
+  <% } %>
+</main>

@@ -1,0 +1,31 @@
+.list-post {
+  padding: 1% 2%;
+}
+
+.list-post:hover {
+  background-color: #bbb;
+  cursor: pointer;
+} 
+
+#list-new-button {
+  margin-top: 5%;
+  margin-left: -1px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+thead {
+  background-color: #ddd;
+  border: 1px solid black;
+}
+
+tr {
+  border: 1px solid black;
+}
+
+td {
+  padding: 15px;
+}

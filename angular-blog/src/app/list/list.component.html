@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <th>Post ID</th>
+    <th>Title</th>
+    <th>Created</th>
+    <th>Modified</th>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let post of posts"
+      id="list-post-{{ post.postid }}"
+      class="list-post"
+      (click)="handleClick(post)"
+    >
+      <td>{{ post.postid }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ formatDate(post.created) }}</td>
+      <td>{{ formatDate(post.modified) }}</td>
+    </tr>
+  </tbody>
+  <button id="list-new-button" (click)="handleNewPost()">New Post</button>
+</table>

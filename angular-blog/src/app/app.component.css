@@ -1,0 +1,9 @@
+.app-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.app-container-item {
+  flex: 50%;
+  margin: 1%;
+}
